@@ -23,6 +23,18 @@ export class MenuComponent implements OnInit {
   //intializing the menu according the media query:taking 1440 as the breakpoint
   ngOnInit(): void {
     // observing language
+
+    const container = document.querySelector('.container_menu');
+    this.breakpointObserver
+      .observe(['(max-width:1440px)'])
+      .subscribe((state: BreakpointState) => {
+        if (state.matches) {
+          container?.classList.add('invisble');
+        } else {
+          container?.classList.remove('invisble');
+          this.isVisible = false;
+        }
+      });
     this.langServ.language$.subscribe((language) => {
       this.lang = language;
       if (this.lang == 'ar') {
@@ -30,28 +42,10 @@ export class MenuComponent implements OnInit {
       } else {
         container?.classList.remove('invisble');
       }
-
+      this.isVisible = !this.isVisible;
       // changing the mini-mmenu layout
       this.changeDir(this.lang);
     });
-    console.log(this.lang);
-    const container = document.querySelector('.container_menu');
-    this.breakpointObserver
-      .observe(['(max-width:1440px)'])
-      .subscribe((state: BreakpointState) => {
-        if (state.matches && this.lang == 'ar') {
-          container?.classList.add('invisble');
-          this.isVisible = false;
-        }
-        if (state.matches && this.lang == 'en') {
-          container?.classList.add('invisble_en');
-          this.isVisible = false;
-        } else {
-          container?.classList.remove('invisble');
-          container?.classList.remove('invisble_en');
-          this.isVisible = true;
-        }
-      });
   }
 
   // function for menu direection :
