@@ -9,7 +9,7 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class MenuComponent implements OnInit {
   //global variables to manipulate the html :
-  isVisible!: boolean; // means it's open or not
+  isVisible = false; // means it's open or not
   isDropped_menu1 = false;
   isDropped_menu2 = false;
   lang!: any;
@@ -30,7 +30,6 @@ export class MenuComponent implements OnInit {
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
           container?.classList.add('invisble');
-          this.isVisible = false;
         } else {
           container?.classList.remove('invisble');
           this.isVisible = true;
