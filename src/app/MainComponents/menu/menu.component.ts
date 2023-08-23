@@ -22,6 +22,7 @@ export class MenuComponent implements OnInit {
   // observing media queries :
   //intializing the menu according the media query:taking 1440 as the breakpoint
   ngOnInit(): void {
+    console.log(this.lang);
     const container = document.querySelector('.container_menu');
     this.breakpointObserver
       .observe(['(max-width:1440px)'])
