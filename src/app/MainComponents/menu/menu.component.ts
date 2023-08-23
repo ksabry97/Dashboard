@@ -30,9 +30,10 @@ export class MenuComponent implements OnInit {
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
           container?.classList.add('invisble');
+          this.isVisible = false;
         } else {
           container?.classList.remove('invisble');
-          this.isVisible = false;
+          this.isVisible = true;
         }
       });
     this.langServ.language$.subscribe((language) => {
