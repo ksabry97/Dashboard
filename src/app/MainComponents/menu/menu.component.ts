@@ -22,6 +22,18 @@ export class MenuComponent implements OnInit {
   // observing media queries :
   //intializing the menu according the media query:taking 1440 as the breakpoint
   ngOnInit(): void {
+    // observing language
+    this.langServ.language$.subscribe((language) => {
+      this.lang = language;
+      if (this.lang == 'ar') {
+        container?.classList.remove('invisble_en');
+      } else {
+        container?.classList.remove('invisble');
+      }
+
+      // changing the mini-mmenu layout
+      this.changeDir(this.lang);
+    });
     console.log(this.lang);
     const container = document.querySelector('.container_menu');
     this.breakpointObserver
@@ -40,19 +52,6 @@ export class MenuComponent implements OnInit {
           this.isVisible = true;
         }
       });
-
-    // observing language
-    this.langServ.language$.subscribe((language) => {
-      this.lang = language;
-      if (this.lang == 'ar') {
-        container?.classList.remove('invisble_en');
-      } else {
-        container?.classList.remove('invisble');
-      }
-
-      // changing the mini-mmenu layout
-      this.changeDir(this.lang);
-    });
   }
 
   // function for menu direection :
