@@ -35,6 +35,13 @@ export class MenuComponent implements OnInit {
           this.isVisible = true;
         }
       });
+
+    this.detectLang();
+  }
+
+  // language Detection :
+  detectLang() {
+    const container = document.querySelector('.container_menu');
     this.langServ.language$.subscribe((language) => {
       this.lang = language;
       if (this.lang == 'ar') {
