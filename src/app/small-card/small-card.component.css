@@ -1,0 +1,36 @@
+.container {
+  width: 33rem;
+  height: 11.6rem;
+  border-radius: 1.05rem;
+  padding: 0.6rem;
+  box-sizing: border-box;
+}
+h1 {
+  margin-bottom: 0;
+}
+.container-info {
+  margin-top: 0.1rem;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  font-size: 1.05rem;
+}
+.container-avatar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button {
+  display: block;
+  width: 3.8rem;
+  height: 3.1rem;
+  border-radius: 1.1rem;
+  background-color: #fff;
+  border: none;
+  outline: none;
+}
+@media (max-width: 480px) {
+  * {
+    font-size: x-small;
+  }
+}

@@ -1,0 +1,85 @@
+<div class="container">
+  <div>
+    <app-search></app-search>
+  </div>
+  <div class="table">
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
+        <!-- ID Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>{{ 'id' | translate }}</th>
+          <td mat-cell *matCellDef="let customer">
+            {{ customer.id }}
+          </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>
+            {{ 'full-name' | translate }}
+          </th>
+          <td
+            style="cursor: pointer"
+            mat-cell
+            *matCellDef="let customer"
+            [matTooltip]="'customer.name' | translate"
+            matTooltipPosition="above"
+          >
+            {{ 'customer.name' | translate }}
+          </td>
+        </ng-container>
+
+        <!-- Email Column -->
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef>{{ 'email' | translate }}</th>
+          <td mat-cell *matCellDef="let customer">{{ customer.email }}</td>
+        </ng-container>
+        <!-- work Days Column -->
+        <ng-container matColumnDef="workDays">
+          <th mat-header-cell *matHeaderCellDef>
+            {{ 'workDays' | translate }}
+          </th>
+          <td mat-cell *matCellDef="let customer">
+            <div class="workDays">
+              <div *ngFor="let element of [0, 1, 2, 3, 4, 5, 6]; let i = index">
+                {{ 'abbrev.' + i | translate }}
+              </div>
+            </div>
+          </td>
+        </ng-container>
+        <!-- Files Column -->
+        <ng-container matColumnDef="files">
+          <th mat-header-cell *matHeaderCellDef>{{ 'files' | translate }}</th>
+          <td mat-cell *matCellDef="let customer">
+            {{ 'customer.files' | translate }}
+          </td>
+        </ng-container>
+        <!-- settings Column -->
+        <ng-container matColumnDef="setting">
+          <th mat-header-cell *matHeaderCellDef>
+            <div class="setting">
+              <img
+                style="width: 10px; height: 10px; color: #fff"
+                src="../../assets/setting3.svg"
+                alt="icon"
+              />
+            </div>
+          </th>
+          <td mat-cell *matCellDef="let customer">
+            <img src="../../assets/dots.svg" alt="icon" />
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons
+        aria-label="Select page of periodic customers"
+      >
+      </mat-paginator>
+    </div>
+  </div>
+</div>

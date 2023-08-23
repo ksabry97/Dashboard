@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="calender">
+    <div class="calender-info">
+      <div>{{ 'date' | translate }}</div>
+      <div class="calender-info_img" *ngIf="lang == 'ar'">
+        <img
+          src="../../../assets/sidebar/right-arrow.svg"
+          alt="right-arrow icon"
+        />
+        <img
+          src="../../../assets/sidebar/left-arrow.svg"
+          alt="right-arrow icon"
+        />
+      </div>
+      <div class="calender-info_img" *ngIf="lang == 'en'">
+        <img
+          src="../../../assets/sidebar/left-arrow.svg"
+          alt="right-arrow icon"
+        />
+        <img
+          src="../../../assets/sidebar/right-arrow.svg"
+          alt="right-arrow icon"
+        />
+      </div>
+    </div>
+    <div class="calender-picker">
+      <img src="../../../assets/sidebar/calendar-2.svg" alt="calendar-icon" />
+      <div>{{ 'march' | translate }} 2023</div>
+      <input type="text" onclick="(this.type = 'date')" />
+    </div>
+  </div>
+  <div>
+    <img src="../../../assets/sidebar/dotted-line.svg" alt="dotted line" />
+  </div>
+  <div class="calender-view">
+    <div *ngFor="let day of days; let i = index">
+      <div class="view">
+        <p>{{ 'days.day-' + i | translate }}</p>
+        <div>{{ day.number }}</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <img src="../../../assets/sidebar/dotted-line.svg" alt="dotted line" />
+  </div>
+  <div class="cards" cdkDropList (cdkDropListDropped)="onDrop($event)">
+    <div *ngFor="let user of users" cdkDrag [@dragging]>
+      <app-small-card [user]="user"></app-small-card>
+    </div>
+  </div>
+</div>

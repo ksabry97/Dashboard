@@ -1,0 +1,52 @@
+{
+  "main": "Main",
+  "account": "Account",
+  "menu": "Menu No. 1",
+  "mini-menu": "Mini Menu",
+  "help": "Help",
+  "setting": "Settings",
+  "reading": "Readings",
+  "person": "First Person",
+  "readings": "Reading No.",
+  "stats": "Statistics ",
+  "first-choice": "First Choice",
+  "second-choice": "Second Choice",
+  "equipment": "Device",
+  "id": "ID",
+  "full-name": "Full Name",
+  "email": "Email",
+  "files": "Files",
+  "customer": {
+    "name": "Virtual Name",
+    "files": "User Interface"
+  },
+  "user": {
+    "data": "It is a long-established fact that content"
+  },
+  "time": "PM",
+  "days": {
+    "day-0": "Sat",
+    "day-1": "Sun",
+    "day-2": "Mon",
+    "day-3": "Tues",
+    "day-4": "Wed",
+    "day-5": "Thu",
+    "day-6": "Fri"
+  },
+  "date": "Calender",
+  "march": "March",
+  "today": "10 May - 10 June",
+  "add": "Add New",
+  "search": "Search",
+  "workDays": "Work Days",
+  "abbrev": {
+    "0": "sa",
+    "1": "su",
+    "2": "m",
+    "3": "tu",
+    "4": "w",
+    "5": "th",
+    "6": "f"
+  },
+  "lang": "Select language"
+}

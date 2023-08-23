@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Caveat&family=Slabo+27px&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+}
+
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+}

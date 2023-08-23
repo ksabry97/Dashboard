@@ -1,0 +1,27 @@
+.container {
+  margin-top: 6rem;
+  background-color: #f2f5f19e;
+  width: 80.3rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+  box-sizing: border-box;
+}
+.container-upper {
+  height: auto;
+}
+.container-lower {
+  margin-top: 1.8rem;
+}
+
+@media (max-width: 1440px) {
+  * {
+    font-size: smaller;
+  }
+  .container {
+    margin-top: 1rem;
+    width: 100%;
+    height: auto;
+  }
+}

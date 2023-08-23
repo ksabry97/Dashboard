@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 19.5rem;
+  gap: 1.6rem;
+}
+.widget {
+  width: 100%;
+  height: 7.5rem;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+.widget-info {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  color: white;
+  font-size: 1.12rem;
+  padding: 1rem;
+}
+.mask {
+  z-index: 1;
+  width: 15rem;
+  height: 100%;
+}
+.widget-info_1 {
+  display: flex;
+  gap: 0.4rem;
+  font-size: 1.87rem;
+}
+.widget:nth-child(1) {
+  background-color: #ff9a3e;
+}
+.widget:nth-child(2) {
+  background-color: #7661e2;
+}
+.widget:nth-child(3) {
+  background-color: #3dd598;
+}
+.widget:nth-child(1) .mask {
+  background-image: url('../../assets/card/mask1.svg');
+}
+.widget:nth-child(2) .mask {
+  background-image: url('../../assets/card/mask2.svg');
+}
+.widget:nth-child(3) .mask {
+  background-image: url('../../assets/card/mask3.svg');
+}
+@media (max-width: 600px) {
+  * {
+    font-size: x-small;
+  }
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  * {
+    font-size: small;
+  }
+  .container {
+    width: 100%;
+  }
+}

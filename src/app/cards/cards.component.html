@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="card">
+    <div class="head">
+      <h1>{{ 'person' | translate }}</h1>
+      <p>
+        {{ 'today' | translate }}
+        <img
+          src="../../assets/arrow-down.svg"
+          alt="icon"
+          style="width: 10.5px; height: 10.5px"
+        />
+      </p>
+    </div>
+
+    <div class="card-info">
+      <div class="card-info_1">
+        <ul>
+          <li>
+            <img src="../../assets/card/Ellipse-green.svg" alt="icon" />
+            {{ 'readings' | translate }} 1
+            <span> 254</span>
+          </li>
+
+          <li>
+            <img src="../../assets/card/Ellipse-purple.svg" alt="icon" />
+            {{ 'readings' | translate }} 2
+            <span> 120</span>
+          </li>
+          <li>
+            <img src="../../assets/card/Ellipse-yellow.svg" alt="icon" />
+            {{ 'readings' | translate }} 3
+            <span> 25</span>
+          </li>
+        </ul>
+      </div>
+      <div class="card-info_img">
+        <img src="../../assets/card/img-elipse_1.svg" alt="elipse" />
+        <img src="../../assets/card/img-elipse_2.svg" alt="elipse" />
+        <img src="../../assets/card/img-elipse_3.svg" alt="elipse" />
+        <img src="../../assets/card/avatar.png" alt="avatar" />
+        <img src="../../assets/card/Ellipse-green.svg" alt="icon" />
+        <img src="../../assets/card/Ellipse-yellow.svg" alt="icon" />
+        <img src="../../assets/card/Ellipse-purple.svg" alt="icon" />
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <h1>{{ 'stats' | translate }}</h1>
+    <div class="card-img">
+      <img src="../../assets/card/Pie Chart.svg" alt="pie chart" />
+      <div class="card-img-info">
+        <span> 158</span> {{ 'equipment' | translate }}
+      </div>
+    </div>
+    <div class="info">
+      <div class="info_1">
+        <img src="../../assets/card/Line-blue.svg" alt="line" />
+        <div><span>108</span> {{ 'first-choice' | translate }}</div>
+      </div>
+      <div class="info_1">
+        <img src="../../assets/card/Line-orange.svg" alt="line" />
+        <div><span>108</span>{{ 'second-choice' | translate }}</div>
+      </div>
+    </div>
+  </div>
+  <app-widgets></app-widgets>
+</div>

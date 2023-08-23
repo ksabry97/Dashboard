@@ -1,0 +1,12 @@
+<div class="form">
+  <label for="language"> {{ 'lang' | translate }}</label>
+  <select
+    name=""
+    id="language"
+    #selectedLang
+    (change)="switch(selectedLang.value)"
+  >
+    <option>ar</option>
+    <option>en</option>
+  </select>
+</div>
