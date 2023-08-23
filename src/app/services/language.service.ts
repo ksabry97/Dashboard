@@ -6,7 +6,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class LanguageService {
   // creating an observable to observe the change of the language among the application
-  language$: BehaviorSubject<any> = new BehaviorSubject<any>('ar');
+  language$: BehaviorSubject<any> = new BehaviorSubject<any>('');
   constructor() {}
 
   // updating Language

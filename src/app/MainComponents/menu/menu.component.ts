@@ -42,18 +42,15 @@ export class MenuComponent implements OnInit {
 
   // language Detection :
   detectLang() {
-    this.isVisible = false;
     const container = document.querySelector('.container_menu');
     this.langServ.language$.subscribe((language) => {
       this.lang = language;
       if (this.lang == 'ar') {
         container?.classList.remove('invisble_en');
-        this.isVisible = true;
       } else {
         container?.classList.remove('invisble');
-        this.isVisible = true;
       }
-
+      this.isVisible = true;
       // changing the mini-mmenu layout
       this.changeDir(this.lang);
     });
