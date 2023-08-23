@@ -9,7 +9,7 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class MenuComponent implements OnInit {
   //global variables to manipulate the html :
-  isVisible = true; // means it's open or not
+  isVisible!: boolean; // means it's open or not
   isDropped_menu1 = false;
   isDropped_menu2 = false;
   lang!: any;
@@ -23,6 +23,17 @@ export class MenuComponent implements OnInit {
   //intializing the menu according the media query:taking 1440 as the breakpoint
   ngOnInit(): void {
     const container = document.querySelector('.container_menu');
+    this.breakpointObserver
+      .observe(['(max-width:1440px)'])
+      .subscribe((state: BreakpointState) => {
+        if (state.matches) {
+          container?.classList.add('invisble');
+          this.isVisible = false;
+        } else {
+          container?.classList.remove('invisble');
+          this.isVisible = true;
+        }
+      });
 
     // observing language
     this.langServ.language$.subscribe((language) => {
