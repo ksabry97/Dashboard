@@ -30,10 +30,8 @@ export class MenuComponent implements OnInit {
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
           container?.classList.add('invisble');
-          console.log(this.isVisible);
         } else {
           container?.classList.remove('invisble');
-          this.isVisible = true;
         }
       });
 
@@ -50,7 +48,16 @@ export class MenuComponent implements OnInit {
       } else {
         container?.classList.remove('invisble');
       }
-      this.isVisible = true;
+
+      // handling close button during language change
+      if (
+        container?.classList.contains('invisble') ||
+        container?.classList.contains('invisble_en')
+      ) {
+        this.isVisible = false;
+      } else {
+        this.isVisible = true;
+      }
       // changing the mini-mmenu layout
       this.changeDir(this.lang);
     });
