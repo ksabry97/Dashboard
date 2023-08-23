@@ -30,7 +30,6 @@ export class MenuComponent implements OnInit {
           container?.classList.add('invisble');
         } else {
           container?.classList.remove('invisble');
-          this.isVisible = true;
         }
       });
 
