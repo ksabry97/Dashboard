@@ -42,7 +42,7 @@ export class MenuComponent implements OnInit {
       } else {
         container?.classList.remove('invisble');
       }
-      this.isVisible = !this.isVisible;
+
       // changing the mini-mmenu layout
       this.changeDir(this.lang);
     });
