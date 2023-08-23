@@ -26,11 +26,16 @@ export class MenuComponent implements OnInit {
     this.breakpointObserver
       .observe(['(max-width:1440px)'])
       .subscribe((state: BreakpointState) => {
-        if (state.matches) {
+        if (state.matches && this.lang == 'ar') {
           container?.classList.add('invisble');
+          this.isVisible = false;
+        }
+        if (state.matches && this.lang == 'en') {
+          container?.classList.add('invisble_en');
           this.isVisible = false;
         } else {
           container?.classList.remove('invisble');
+          container?.classList.remove('invisble_en');
           this.isVisible = true;
         }
       });
