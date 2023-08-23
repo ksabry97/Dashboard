@@ -9,7 +9,7 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class MenuComponent implements OnInit {
   //global variables to manipulate the html :
-  isVisible = false; // means it's open or not
+  isVisible!: boolean; // means it's open or not
   isDropped_menu1 = false;
   isDropped_menu2 = false;
   lang!: any;
@@ -30,6 +30,7 @@ export class MenuComponent implements OnInit {
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
           container?.classList.add('invisble');
+          this.isVisible = false;
         } else {
           container?.classList.remove('invisble');
           this.isVisible = true;
@@ -46,10 +47,12 @@ export class MenuComponent implements OnInit {
       this.lang = language;
       if (this.lang == 'ar') {
         container?.classList.remove('invisble_en');
+        this.isVisible = true;
       } else {
         container?.classList.remove('invisble');
+        this.isVisible = true;
       }
-      this.isVisible = true;
+
       // changing the mini-mmenu layout
       this.changeDir(this.lang);
     });
