@@ -42,6 +42,7 @@ export class MenuComponent implements OnInit {
 
   // language Detection :
   detectLang() {
+    this.isVisible = false;
     const container = document.querySelector('.container_menu');
     this.langServ.language$.subscribe((language) => {
       this.lang = language;
