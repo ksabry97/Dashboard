@@ -11,7 +11,10 @@ import { customer } from 'src/app/models/Customer';
   styleUrls: ['./table.component.css'],
 })
 export class TableComponent implements OnInit {
+  // intializing the array columns tp adjust responsisvty among screens
   displayedColumns: string[] = [];
+
+  // static data to change the UI
   customers: customer[] = [
     {
       id: 'ID-15877',

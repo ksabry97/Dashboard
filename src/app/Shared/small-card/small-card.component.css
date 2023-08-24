@@ -37,6 +37,7 @@ button:hover {
   background-color: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 /*  media query to adjust the view in small screens */
 @media (max-width: 480px) {
