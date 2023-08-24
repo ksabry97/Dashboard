@@ -1,3 +1,4 @@
+/* the container of the menu */
 .container_menu {
   box-sizing: border-box;
   padding: 1rem;
@@ -7,6 +8,7 @@
   background-color: #fffffc;
   position: relative;
 }
+/* the position of the menu-arrow in the 'rtl' direction */
 .arrow_ar {
   position: absolute;
   top: 2%;
@@ -16,7 +18,7 @@
   border-radius: 0.5rem;
   cursor: pointer;
 }
-
+/* the position of the menu-arrow in the 'ltr' direction */
 .arrow_en {
   position: absolute;
   top: 2%;
@@ -26,15 +28,17 @@
   border-radius: 0.5rem;
   cursor: pointer;
 }
+/* the animation of the menu-in the 'rtl' direction */
 .invisble {
   transform: translateX(100%);
   z-index: 100;
 }
+/* the animation of the menu-in the 'rtl' direction */
 .invisble_en {
   transform: translateX(-100%);
   z-index: 100;
 }
-
+/* styling the menu elments */
 hr {
   width: 24.3rem;
   height: 0.1rem;
@@ -72,6 +76,7 @@ li img {
   height: 2.1rem;
 }
 
+/* styling the drop-down menus */
 .drop-down {
   height: auto;
   flex-direction: column;
@@ -98,6 +103,10 @@ li img {
   position: absolute;
   top: 15%;
 }
+/*  class for manipulating drop down menu */
+.visible {
+  display: initial;
+}
 /* for ltr direction */
 .mini-menu_ar {
   padding-right: 8rem;
@@ -114,7 +123,7 @@ li img {
   left: 36%;
   transform: scaleX(-1);
 }
-
+/* styling the mini-menu elments */
 .mini-menu li {
   height: 2.5rem;
 }
@@ -124,9 +133,9 @@ li img {
   width: 100%;
   height: 100%;
 }
-.visible {
-  display: initial;
-}
+
+/* Media query to adjust the postion of the meu in small screens */
+
 @media (max-width: 1440px) {
   .container_menu {
     position: fixed;

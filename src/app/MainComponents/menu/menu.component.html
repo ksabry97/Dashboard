@@ -1,4 +1,5 @@
 <div class="container_menu">
+  <!-- adjusting the direction of the menu-arrow according to the change of language -->
   <div class="arrow_ar" (click)="toggle()" *ngIf="lang == 'ar'">
     <img
       *ngIf="isVisible == false"
@@ -25,11 +26,13 @@
       style="width: 9px; height: 13px"
     />
   </div>
-
+  <!-- application Logo -->
   <div class="logo-image">
     <img src="../../../assets/logo.svg" alt="logo-image" />
   </div>
   <hr />
+
+  <!-- the upper part of the menu -->
   <div class="container-main">
     <h1>{{ 'main' | translate }}</h1>
     <ul>
@@ -37,6 +40,8 @@
         <img src="../../../assets/home.svg" alt="home icon" />
         <a> {{ 'main' | translate }}</a>
       </li>
+
+      <!--  the tweo drop-down menues -->
       <li class="drop-down" style="margin-bottom: 1.3rem">
         <div class="flex">
           <img src="../../../assets/home.svg" alt="home icon" />
@@ -45,6 +50,7 @@
             style="margin-right: 8rem; cursor: pointer"
             (click)="dropDown('menu1')"
           >
+            <!-- adjusting the direction of the arrow according to the state of the mini-menu -->
             <img
               src="../../../assets/arrow-up.svg"
               style="width: 6.75px; height: 3.75px"
@@ -78,6 +84,7 @@
             style="margin-right: 8rem; cursor: pointer"
             (click)="dropDown('menu2')"
           >
+            <!-- adjusting the direction of the arrow according to the state of the mini-menu -->
             <img
               src="../../../assets/arrow-up.svg"
               style="width: 6.75px; height: 3.75px"
@@ -113,6 +120,7 @@
       </li>
     </ul>
   </div>
+  <!-- The lower part of the menu -->
   <div class="container-sub">
     <h1>{{ 'account' | translate }}</h1>
     <ul>
