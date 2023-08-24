@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { User } from '../models/User';
-import { LanguageService } from '../services/language.service';
+import { User } from 'src/app/models/User';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-small-card',

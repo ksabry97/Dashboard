@@ -41,13 +41,13 @@
   background-color: #3dd598;
 }
 .widget:nth-child(1) .mask {
-  background-image: url('../../assets/card/mask1.svg');
+  background-image: url('../../../assets/card/mask1.svg');
 }
 .widget:nth-child(2) .mask {
-  background-image: url('../../assets/card/mask2.svg');
+  background-image: url('../../../assets/card/mask2.svg');
 }
 .widget:nth-child(3) .mask {
-  background-image: url('../../assets/card/mask3.svg');
+  background-image: url('../../../assets/card/mask3.svg');
 }
 @media (max-width: 600px) {
   * {
