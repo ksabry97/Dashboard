@@ -1,4 +1,5 @@
 <div class="container">
+  <!-- the right card -->
   <div class="card">
     <div class="head">
       <h1>{{ 'person' | translate }}</h1>
@@ -11,7 +12,7 @@
         />
       </p>
     </div>
-
+    <!-- card information -->
     <div class="card-info">
       <div class="card-info_1">
         <ul>
@@ -33,6 +34,7 @@
           </li>
         </ul>
       </div>
+      <!--  card images -->
       <div class="card-info_img">
         <img src="../../../assets/card/img-elipse_1.svg" alt="elipse" />
         <img src="../../../assets/card/img-elipse_2.svg" alt="elipse" />
@@ -44,6 +46,7 @@
       </div>
     </div>
   </div>
+  <!--  left card -->
   <div class="card">
     <h1>{{ 'stats' | translate }}</h1>
     <div class="card-img">
@@ -63,5 +66,6 @@
       </div>
     </div>
   </div>
+  <!-- displaying the widget component -->
   <app-widgets></app-widgets>
 </div>

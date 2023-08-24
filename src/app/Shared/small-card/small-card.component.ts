@@ -8,8 +8,9 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrls: ['./small-card.component.css'],
 })
 export class SmallCardComponent implements OnInit {
+  // using the input tp get data dynamically from the parent component
   @Input() user!: User;
-  lang!: string;
+  lang!: string; // Language change variable
 
   // obsererving language change:
   constructor(public langService: LanguageService) {}

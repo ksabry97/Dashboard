@@ -1,3 +1,4 @@
+/*  styling the container */
 .container {
   width: 33rem;
   height: 11.6rem;
@@ -8,6 +9,7 @@
 h1 {
   margin-bottom: 0;
 }
+/* styling the container information */
 .container-info {
   margin-top: 0.1rem;
   padding: 0;
@@ -20,6 +22,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
 }
+/*  styling the buttton */
 button {
   display: block;
   width: 3.8rem;
@@ -29,6 +32,13 @@ button {
   border: none;
   outline: none;
 }
+/* adding animation to the button */
+button:hover {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+/*  media query to adjust the view in small screens */
 @media (max-width: 480px) {
   * {
     font-size: x-small;

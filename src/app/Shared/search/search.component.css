@@ -1,8 +1,10 @@
+/* styling the container */
 .container {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
+/* styling the search input */
 .search {
   width: 27.7rem;
   height: 3.6rem;
@@ -14,6 +16,7 @@
   border-radius: 0.5rem;
   background-color: white;
 }
+/* styling the right elments */
 .right {
   display: flex;
   gap: 1rem;
@@ -44,6 +47,7 @@
   border: 0.1rem solid rgba(146, 161, 173, 0.4);
   border-radius: 0.5rem;
 }
+/*  styling the left elements */
 button {
   font-size: 1.2rem;
   display: block;
@@ -54,12 +58,14 @@ button {
   border: none;
   outline: none;
 }
+/*  applying aanimations to the button */
 button:hover {
   cursor: pointer;
   background-color: white;
   border: 1px solid #feee00;
   color: #feee00;
 }
+/* Media query to adjust the view in small screens */
 @media (max-width: 600px) {
   * {
     font-size: smaller;

@@ -1,8 +1,9 @@
+/* stylin the container */
 .container {
   display: flex;
   gap: 1rem;
 }
-
+/* styling the cards */
 .card {
   position: relative;
   width: 27.9rem;
@@ -30,6 +31,7 @@ h1 {
   font-weight: 700;
   line-height: 3rem;
 }
+/* styling card information */
 .card-info {
   display: flex;
   gap: 1.6rem;
@@ -41,6 +43,7 @@ h1 {
   margin-top: 1rem;
   position: relative;
 }
+/*  postioning the card images */
 .card-info_img img:nth-child(2) {
   position: absolute;
   top: 10%;
@@ -71,6 +74,7 @@ h1 {
   top: 77%;
   left: 60%;
 }
+/* styling the card information */
 ul {
   list-style: none;
   padding: 0;
@@ -117,7 +121,7 @@ span {
   color: #b6baca;
   font-size: 1.2rem;
 }
-
+/*  Media query to adjust the view in small screens */
 @media (max-width: 480px) {
   * {
     font-size: x-small;
