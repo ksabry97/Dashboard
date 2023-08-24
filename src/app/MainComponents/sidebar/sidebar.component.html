@@ -2,6 +2,7 @@
   <div class="calender">
     <div class="calender-info">
       <div>{{ 'date' | translate }}</div>
+      <!-- adjusting the directions of the arrows in the 'rtl' direction -->
       <div class="calender-info_img" *ngIf="lang == 'ar'">
         <img
           src="../../../assets/sidebar/right-arrow.svg"
@@ -12,6 +13,7 @@
           alt="right-arrow icon"
         />
       </div>
+      <!-- adjusting the directions of the arrows in the 'ltr' direction -->
       <div class="calender-info_img" *ngIf="lang == 'en'">
         <img
           src="../../../assets/sidebar/left-arrow.svg"
@@ -23,6 +25,7 @@
         />
       </div>
     </div>
+    <!-- static calender picker -->
     <div class="calender-picker">
       <img src="../../../assets/sidebar/calendar-2.svg" alt="calendar-icon" />
       <div>{{ 'march' | translate }} 2023</div>
@@ -32,6 +35,7 @@
   <div>
     <img src="../../../assets/sidebar/dotted-line.svg" alt="dotted line" />
   </div>
+  <!-- viewing the 7 days of the week -->
   <div class="calender-view">
     <div *ngFor="let day of days; let i = index">
       <div class="view">
@@ -43,6 +47,7 @@
   <div>
     <img src="../../../assets/sidebar/dotted-line.svg" alt="dotted line" />
   </div>
+  <!-- dynamiclly view the small card component -->
   <div class="cards" cdkDropList (cdkDropListDropped)="onDrop($event)">
     <div *ngFor="let user of users" cdkDrag [@dragging]>
       <app-small-card [user]="user"></app-small-card>

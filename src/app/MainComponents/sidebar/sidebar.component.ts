@@ -8,6 +8,7 @@ import { LanguageService } from 'src/app/services/language.service';
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
+  // animation for the drag and drop
   animations: [
     trigger('dragging', [
       transition(':enter', [
@@ -21,6 +22,7 @@ import { LanguageService } from 'src/app/services/language.service';
   ],
 })
 export class SidebarComponent {
+  // static data to manupulate the UI
   users: User[] = [
     {
       data: 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى ',
@@ -74,6 +76,7 @@ export class SidebarComponent {
       number: 30,
     },
   ];
+  // language variable
   lang!: string;
 
   // obsererving language change:

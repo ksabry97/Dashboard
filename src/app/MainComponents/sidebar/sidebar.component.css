@@ -1,3 +1,4 @@
+/* styling the container */
 .container {
   margin-top: 3rem;
   width: 36.4rem;
@@ -5,6 +6,7 @@
   box-sizing: border-box;
   padding: 0 2rem;
 }
+/* styling the calender elements */
 .calender {
   display: flex;
   justify-content: space-between;
@@ -31,6 +33,7 @@
   display: flex;
   justify-content: space-between;
 }
+/*  styling the calender picker */
 .calender-picker {
   width: 9.3rem;
   height: 3.2rem;
@@ -55,6 +58,7 @@
   background-image: url('../../../assets/sidebar/arrow-bottom.svg');
   background-position: center;
 }
+/*  styling the view of the week days */
 .view {
   width: 4rem;
   height: 7.5rem;
@@ -74,6 +78,7 @@
   color: #b4b4b4;
   font-size: 0.75rem;
 }
+/* hover animations */
 .view:hover {
   background-color: #feee00;
   cursor: pointer;
@@ -82,6 +87,7 @@
   background-color: black;
   color: white;
 }
+/*  styling the container of the small-card component */
 .cards {
   display: flex;
   flex-direction: column;
@@ -89,6 +95,7 @@
   margin-top: 2.9rem;
   cursor: grab;
 }
+/* Media query to adjust the component in small screens */
 @media (max-width: 480px) {
   * {
     font-size: xx-small;

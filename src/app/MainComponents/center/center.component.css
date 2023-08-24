@@ -1,3 +1,4 @@
+/* styling the container */
 .container {
   margin-top: 6rem;
   background-color: #f2f5f19e;
@@ -14,7 +15,7 @@
 .container-lower {
   margin-top: 1.8rem;
 }
-
+/* Media query to adjust the component among the small screens  */
 @media (max-width: 1440px) {
   * {
     font-size: smaller;
