@@ -1,137 +1,137 @@
 <div class="container_menu">
-  <!-- adjusting the direction of the menu-arrow according to the change of language -->
-  <div class="arrow_ar" (click)="toggle()" *ngIf="lang == 'ar'">
-    <img
-      *ngIf="isVisible == false"
-      src="../../../assets/sidebar/left-arrow.svg"
-      alt="icon"
-    />
-    <img
-      *ngIf="isVisible == true"
-      src="../../../assets/sidebar/close.svg"
-      alt="icon"
-      style="width: 9px; height: 13px"
-    />
-  </div>
-  <div class="arrow_en" (click)="toggle()" *ngIf="lang == 'en'">
-    <img
-      *ngIf="isVisible == false"
-      src="../../../assets/sidebar/right-arrow.svg"
-      alt="icon"
-    />
-    <img
-      *ngIf="isVisible == true"
-      src="../../../assets/sidebar/close.svg"
-      alt="icon"
-      style="width: 9px; height: 13px"
-    />
-  </div>
-  <!-- application Logo -->
-  <div class="logo-image">
-    <img src="../../../assets/logo.svg" alt="logo-image" />
-  </div>
-  <hr />
+    <!-- adjusting the direction of the menu-arrow according to the change of language -->
+    <div class="arrow_ar" (click)="toggle()" *ngIf="lang == 'ar'">
+        <img
+        *ngIf="isVisible == false"
+        src="../../../assets/sidebar/left-arrow.svg"
+        alt="icon"
+        />
+        <img
+        *ngIf="isVisible == true"
+        src="../../../assets/sidebar/close.svg"
+        alt="icon"
+        style="width: 9px; height: 13px"
+        />
+    </div>
+    <div class="arrow_en" (click)="toggle()" *ngIf="lang == 'en'">
+        <img
+        *ngIf="isVisible == false"
+        src="../../../assets/sidebar/right-arrow.svg"
+        alt="icon"
+        />
+        <img
+        *ngIf="isVisible == true"
+        src="../../../assets/sidebar/close.svg"
+        alt="icon"
+        style="width: 9px; height: 13px"
+        />
+    </div>
+    <!-- application Logo -->
+    <div class="logo-image">
+        <img src="../../../assets/logo.svg" alt="logo-image" />
+    </div>
+    <hr />
 
-  <!-- the upper part of the menu -->
-  <div class="container-main">
-    <h1>{{ 'main' | translate }}</h1>
-    <ul>
-      <li>
-        <img src="../../../assets/home.svg" alt="home icon" />
-        <a> {{ 'main' | translate }}</a>
-      </li>
+    <!-- the upper part of the menu -->
+    <div class="container-main">
+        <h1>{{ 'main' | translate }}</h1>
+        <ul>
+            <li>
+                <img src="../../../assets/home.svg" alt="home icon" />
+                <a> {{ 'main' | translate }}</a>
+            </li>
 
-      <!--  the tweo drop-down menues -->
-      <li class="drop-down" style="margin-bottom: 1.3rem">
-        <div class="flex">
-          <img src="../../../assets/home.svg" alt="home icon" />
-          <a> {{ 'menu' | translate }}</a>
-          <div
-            style="margin-right: 8rem; cursor: pointer"
-            (click)="dropDown('menu1')"
-          >
-            <!-- adjusting the direction of the arrow according to the state of the mini-menu -->
-            <img
-              src="../../../assets/arrow-up.svg"
-              style="width: 6.75px; height: 3.75px"
-              alt="icon"
-              *ngIf="isDropped_menu1"
-            />
-            <img
-              src="../../../assets/arrow-down.svg"
-              style="width: 6.75px; height: 3.75px"
-              alt="icon"
-              *ngIf="!isDropped_menu1"
-            />
-          </div>
-        </div>
-        <div class="mini-menu" id="menu1">
-          <ul>
-            <li>{{ 'mini-menu' | translate }}</li>
-            <li>{{ 'mini-menu' | translate }}</li>
-            <li>{{ 'mini-menu' | translate }}</li>
-          </ul>
-          <div class="mini-menu_img">
-            <img src="../../../assets/mini-menu.svg" alt="icon" />
-          </div>
-        </div>
-      </li>
-      <li class="drop-down" style="margin-bottom: 0.7rem">
-        <div class="flex">
-          <img src="../../../assets/home.svg" alt="home icon" />
-          <a> {{ 'menu' | translate }}</a>
-          <div
-            style="margin-right: 8rem; cursor: pointer"
-            (click)="dropDown('menu2')"
-          >
-            <!-- adjusting the direction of the arrow according to the state of the mini-menu -->
-            <img
-              src="../../../assets/arrow-up.svg"
-              style="width: 6.75px; height: 3.75px"
-              alt="icon"
-              *ngIf="isDropped_menu2"
-            />
-            <img
-              src="../../../assets/arrow-down.svg"
-              style="width: 6.75px; height: 3.75px"
-              alt="icon"
-              *ngIf="!isDropped_menu2"
-            />
-          </div>
-        </div>
-        <div class="mini-menu" id="menu2">
-          <ul>
-            <li>{{ 'mini-menu' | translate }}</li>
-            <li>{{ 'mini-menu' | translate }}</li>
-            <li>{{ 'mini-menu' | translate }}</li>
-          </ul>
-          <div class="mini-menu_img">
-            <img src="../../../assets/mini-menu.svg" alt="icon" />
-          </div>
-        </div>
-      </li>
-      <li>
-        <img src="../../../assets/home.svg" alt="home icon" />
-        <a> {{ 'menu' | translate }}</a>
-      </li>
-      <li>
-        <img src="../../../assets/home.svg" alt="home icon" />
-        <a> {{ 'menu' | translate }}</a>
-      </li>
-    </ul>
-  </div>
-  <!-- The lower part of the menu -->
-  <div class="container-sub">
-    <h1>{{ 'account' | translate }}</h1>
-    <ul>
-      <li>
-        <img src="../../../assets/info-circle.svg" alt="home icon" />
-        <a>{{ 'help' | translate }}</a>
-      </li>
-      <li>
-        <img src="../../../assets/setting-2.svg" alt="home icon" />
-        <a>{{ 'setting' | translate }}</a>
-      </li>
-    </ul>
-  </div>
+            <!--  the tweo drop-down menues -->
+            <li class="drop-down" style="margin-bottom: 1.3rem">
+                <div class="flex">
+                    <img src="../../../assets/home.svg" alt="home icon" />
+                    <a> {{ 'menu' | translate }}</a>
+                    <div
+                        style="margin-right: 8rem; cursor: pointer"
+                        (click)="dropDown('menu1')"
+                        >
+                        <!-- adjusting the direction of the arrow according to the state of the mini-menu -->
+                        <img
+                        src="../../../assets/arrow-up.svg"
+                        style="width: 6.75px; height: 3.75px"
+                        alt="icon"
+                        *ngIf="isDropped_menu1"
+                        />
+                        <img
+                        src="../../../assets/arrow-down.svg"
+                        style="width: 6.75px; height: 3.75px"
+                        alt="icon"
+                        *ngIf="!isDropped_menu1"
+                        />
+                    </div>
+                </div>
+                <div class="mini-menu" id="menu1">
+                    <ul>
+                        <li>{{ 'mini-menu' | translate }}</li>
+                        <li>{{ 'mini-menu' | translate }}</li>
+                        <li>{{ 'mini-menu' | translate }}</li>
+                    </ul>
+                    <div class="mini-menu_img">
+                        <img src="../../../assets/mini-menu.svg" alt="icon" />
+                    </div>
+                </div>
+            </li>
+            <li class="drop-down" style="margin-bottom: 0.7rem">
+                <div class="flex">
+                    <img src="../../../assets/home.svg" alt="home icon" />
+                    <a> {{ 'menu' | translate }}</a>
+                    <div
+                        style="margin-right: 8rem; cursor: pointer"
+                        (click)="dropDown('menu2')"
+                        >
+                        <!-- adjusting the direction of the arrow according to the state of the mini-menu -->
+                        <img
+                        src="../../../assets/arrow-up.svg"
+                        style="width: 6.75px; height: 3.75px"
+                        alt="icon"
+                        *ngIf="isDropped_menu2"
+                        />
+                        <img
+                        src="../../../assets/arrow-down.svg"
+                        style="width: 6.75px; height: 3.75px"
+                        alt="icon"
+                        *ngIf="!isDropped_menu2"
+                        />
+                    </div>
+                </div>
+                <div class="mini-menu" id="menu2">
+                    <ul>
+                        <li>{{ 'mini-menu' | translate }}</li>
+                        <li>{{ 'mini-menu' | translate }}</li>
+                        <li>{{ 'mini-menu' | translate }}</li>
+                    </ul>
+                    <div class="mini-menu_img">
+                        <img src="../../../assets/mini-menu.svg" alt="icon" />
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="../../../assets/home.svg" alt="home icon" />
+                <a> {{ 'menu' | translate }}</a>
+            </li>
+            <li>
+                <img src="../../../assets/home.svg" alt="home icon" />
+                <a> {{ 'menu' | translate }}</a>
+            </li>
+        </ul>
+    </div>
+    <!-- The lower part of the menu -->
+    <div class="container-sub">
+        <h1>{{ 'account' | translate }}</h1>
+        <ul>
+            <li>
+                <img src="../../../assets/info-circle.svg" alt="home icon" />
+                <a>{{ 'help' | translate }}</a>
+            </li>
+            <li>
+                <img src="../../../assets/setting-2.svg" alt="home icon" />
+                <a>{{ 'setting' | translate }}</a>
+            </li>
+        </ul>
+    </div>
 </div>
